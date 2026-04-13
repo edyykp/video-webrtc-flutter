@@ -221,7 +221,10 @@ class _VideoCallPageState extends State<VideoCallPage> {
         title: const Text('Camera: camera_101'),
         actions: [
           if (_callManager.isConnected)
-            const Icon(Icons.security, color: Colors.green),
+            const Tooltip(
+              message: 'Conexiune securizată',
+              child: Icon(Icons.security, color: Colors.green),
+            ),
         ],
       ),
       body: Stack(
